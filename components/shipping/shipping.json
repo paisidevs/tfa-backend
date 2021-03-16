@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_shipping_shippings",
+  "info": {
+    "name": "shipping",
+    "icon": "shipping-fast",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "phoneNumber": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "text"
+    },
+    "address": {
+      "type": "component",
+      "repeatable": false,
+      "component": "address.address"
+    },
+    "contact": {
+      "type": "component",
+      "repeatable": false,
+      "component": "contact.contact"
+    }
+  }
+}
