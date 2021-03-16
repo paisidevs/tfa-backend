@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customers",
+  "info": {
+    "name": "customer",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "billing": {
+      "type": "component",
+      "repeatable": false,
+      "component": "billing.billing"
+    },
+    "shipping": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shipping.shipping"
+    },
+    "faxNumber": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string"
+    },
+    "contact": {
+      "type": "component",
+      "repeatable": false,
+      "component": "contact.contact"
+    }
+  }
+}

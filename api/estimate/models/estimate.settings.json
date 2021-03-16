@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "estimates",
+  "info": {
+    "name": "estimate",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "currency": {
+      "type": "string"
+    },
+    "customer": {
+      "model": "customer"
+    },
+    "number": {
+      "type": "integer"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Saved",
+        "Sent",
+        "Viewed",
+        "Expired"
+      ]
+    },
+    "amount": {
+      "type": "float",
+      "default": 0
+    },
+    "date": {
+      "type": "date"
+    }
+  }
+}
